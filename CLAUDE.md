@@ -18,6 +18,8 @@ All commands require `NODE_OPTIONS='--require ./node-compat.cjs'` (injected auto
 
 To run a single test file: `npx vitest run src/lib/transform/__tests__/jsx-transformer.test.ts`
 
+Vitest config: `vitest.config.mts` — environment: `jsdom`, plugins: `vite-tsconfig-paths` (enables `@/*` aliases), `@vitejs/plugin-react`.
+
 ## Architecture
 
 UIGen is an AI-powered React component generator. Users describe components in natural language; Claude generates/edits them in a **virtual file system** (in-memory only, no disk writes) and a live preview renders the result.
